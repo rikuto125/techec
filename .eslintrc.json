@@ -1,3 +1,31 @@
+// .eslintrc
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react", "react-hooks"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "next",
+    "next/core-web-vitals"
+  ],
+//  "extends": ["next", "next/core-web-vitals"],
+  // 追記
+  "rules": {
+    // セミコロンない場合、エラー出力
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"]
+  }
 }
+
