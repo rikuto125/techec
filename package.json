@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start -p 3030",
     "lint": "next lint",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider build-storybook"
+    "storybook": "node_modules/.bin/start-storybook -p 6006 -s front/public",
+    "build-storybook": "node_modules/.bin/build-storybook -s front/public"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.5.2",
@@ -24,7 +24,10 @@
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
     "sb": "^6.5.16",
+    "storybook-addon-performance": "^0.17.1",
+    "tsconfig-paths-webpack-plugin": "^4.0.1",
     "typescript": "5.0.2"
   },
   "devDependencies": {
@@ -41,7 +44,8 @@
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "babel-loader": "^8.3.0",
-    "eslint-plugin-storybook": "^0.6.11"
+    "eslint-plugin-storybook": "^0.6.11",
+    "webpack-cli": "^5.0.1"
   },
   "resolutions": {
     "@storybook/react-docgen-typescript-plugin": "1.0.6--canary.9.cd77847.0"
